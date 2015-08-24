@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/colSetType"
+        android:title="@string/colSetType" />
+    <item
+        android:id="@+id/colRename"
+        android:title="@string/colRename" />
+    <item
+        android:id="@+id/colDel"
+        android:title="@string/colDel" />
+    <item
+        android:id="@+id/colAdd"
+        android:title="@string/colAdd" />
+</menu>

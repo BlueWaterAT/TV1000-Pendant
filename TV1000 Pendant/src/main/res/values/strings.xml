@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TV1000 Pendant</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_main">Main Activity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="status_start">"Status: "</string>
+    <string name="res_time">"Time: "</string>
+    <string name="res_message">"Message: "</string>
+
+    <string name="updateSpeedDisplay">"Current delay (ms): "</string>
+    <string name="updateSpeed">"Speed: "</string>
+    <string name="updateHeading">"Heading: "</string>
+
+    <string name="conStatusConnecting">"Connecting to "</string>
+    <string name="conStatusConnected">"Connected to "</string>
+    <string name="conStatusDisconnected">Disconnected</string>
+
+    <string name="fragHome">Home</string>
+    <string name="fragHMIView">HMI View</string>
+    <string name="fragPathProg">Path Programming</string>
+    <array name="mainFragments">
+        <item>@string/fragHome</item>
+        <item>@string/fragHMIView</item>
+        <item>@string/fragPathProg</item>
+    </array>
+
+    <!-- Programming Page -->
+    <string name="progIncr">+</string>
+    <string name="progDecr">-</string>
+    <string name="progInsert">Insert Row</string>
+    <string name="progDel">Delete Row</string>
+    <string name="progCopy">Copy Row</string>
+    <string name="progPaste">Paste Row</string>
+    <string name="progParam">Parameters</string>
+
+    <!-- Are these even needed? Talk w/ Parsh -->
+    <string name="progSaveAs">Save As…</string>
+    <string name="progLoad">Load Table</string>
+
+    <string name="progSend">Send</string>
+
+
+    <!-- Column popup stuff -->
+    <string name="colSetType">Set Column Type</string>
+    <string name="colRename">Rename</string>
+    <string name="colDel">Delete Column</string>
+    <string name="colAdd">Add Column</string>
+
+    <!-- Parameter editor stuff -->
+    <string name="paramTitle">Parameter Editor</string>
+    <string name="paramClose">Close</string>
+    <string name="paramSaveClose">Save &amp; Close</string>
+    <string name="paramColData">Data</string>
+    <string name="paramColComm">Comment</string>
+    <string name="paramKeyRows">nrows</string>
+    <string name="paramKeyPath">path</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TV1000 Pendant/TV1000 Pendant.iml" filepath="$PROJECT_DIR$/TV1000 Pendant/TV1000 Pendant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TV1000-Pendant.iml" filepath="$PROJECT_DIR$/TV1000-Pendant.iml" />
+    </modules>
+  </component>
+</project>
