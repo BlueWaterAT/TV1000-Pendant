@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 
 
-
 /**
  * A SeekBar is an extension of ProgressBar that adds a draggable thumb. The user can touch
  * the thumb and drag left or right to set the current progress level or use the arrow keys.
@@ -29,9 +28,9 @@ public class VerticalSeekBar extends AbsVerticalSeekBar {
          * Notification that the progress level has changed. Clients can use the fromUser parameter
          * to distinguish user-initiated changes from those that occurred programmatically.
          *
-         * @param seekBar The SeekBar whose progress has changed
+         * @param seekBar  The SeekBar whose progress has changed
          * @param progress The current progress level. This will be in the range 0..max where max
-         *        was set by {@link ProgressBar#setMax(int)}. (The default value for max is 100.)
+         *                 was set by {@link ProgressBar#setMax(int)}. (The default value for max is 100.)
          * @param fromUser True if the progress change was initiated by the user.
          */
         void onProgressChanged(VerticalSeekBar seekBar, int progress, boolean fromUser);
@@ -39,6 +38,7 @@ public class VerticalSeekBar extends AbsVerticalSeekBar {
         /**
          * Notification that the user has started a touch gesture. Clients may want to use this
          * to disable advancing the seekbar.
+         *
          * @param seekBar The SeekBar in which the touch gesture began
          */
         void onStartTrackingTouch(VerticalSeekBar seekBar);
@@ -46,6 +46,7 @@ public class VerticalSeekBar extends AbsVerticalSeekBar {
         /**
          * Notification that the user has finished a touch gesture. Clients may want to use this
          * to re-enable advancing the seekbar.
+         *
          * @param seekBar The SeekBar in which the touch gesture began
          */
         void onStopTrackingTouch(VerticalSeekBar seekBar);
@@ -79,7 +80,6 @@ public class VerticalSeekBar extends AbsVerticalSeekBar {
      * provides notifications of when the user starts and stops a touch gesture within the SeekBar.
      *
      * @param l The seek bar notification listener
-     *
      * @see SeekBar.OnSeekBarChangeListener
      */
     public void setOnSeekBarChangeListener(OnSeekBarChangeListener l) {

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="connect_blue">#26d1e7</color>
+    <color name="connect_green">#2ddc02</color>
+    <color name="connect_red">#ea6492</color>
+    <color name="redColor">#ed598b</color>
+    <color name="greenColor">#45da2b</color>
+    <color name="defaultColor">#1445da2b</color>
+
+
+    <string name="colors">\@Colors/connect_blue</string>
+</resources>

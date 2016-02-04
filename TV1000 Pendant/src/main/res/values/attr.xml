@@ -11,6 +11,18 @@
         <attr name="android:secondaryProgress" />
     </declare-styleable>
 
+    <declare-styleable name="Joystick">
+        <attr name="start_on_first_touch" format="boolean" />
+        <attr name="force_square" format="boolean" />
+        <attr name="radius" format="dimension" />
+        <attr name="motion_constraint" format="enum">
+            <enum name="None" value="0" />
+            <enum name="Horizontal" value="1" />
+            <enum name="Vertical" value="2" />
+        </attr>
+    </declare-styleable>
+
+
     <declare-styleable name="SeekBar">
         <attr name="android:thumb" />
         <attr name="android:thumbOffset" />
@@ -20,13 +32,13 @@
     </declare-styleable>
 
     <declare-styleable name="NumberSpinner">
-        <attr name="spinnerMin" format="integer"/>
-        <attr name="spinnerMax" format="integer"/>
-        <attr name="spinnerStep" format="integer"/>
+        <attr name="spinnerMin" format="integer" />
+        <attr name="spinnerMax" format="integer" />
+        <attr name="spinnerStep" format="integer" />
     </declare-styleable>
 
-    <declare-styleable name="EditableTable">
-        <attr name="rows" format="integer"/>
-        <attr name="cols" format="integer"/>
+    <declare-styleable name="ProgramTable">
+        <attr name="rows" format="integer" />
+        <attr name="cols" format="integer" />
     </declare-styleable>
 </resources>

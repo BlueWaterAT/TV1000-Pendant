@@ -6,7 +6,9 @@ import java.net.Socket;
  * @author Kareem ElFaramawi
  */
 public interface ConnectionListener {
-	public void onConnect(Socket s);
-	public void onDataReceived(String data);
-	public void onDisconnect(Socket s);
+    void onConnect(Socket s);
+
+    void onDataReceived(String data);
+
+    void onDisconnect(Socket s);
 }

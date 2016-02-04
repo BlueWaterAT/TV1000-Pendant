@@ -10,7 +10,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import com.bwat.pendant.R;
 
-public class AbsVerticalSeekBar extends VerticalProgressBar{
+public class AbsVerticalSeekBar extends VerticalProgressBar {
 
     private Drawable mThumb;
     private int mThumbOffset;
@@ -36,7 +36,7 @@ public class AbsVerticalSeekBar extends VerticalProgressBar{
     private float mDisabledAlpha;
 
     public AbsVerticalSeekBar(Context context) {
-    	super(context);
+        super(context);
     }
 
     public AbsVerticalSeekBar(Context context, AttributeSet attrs) {
@@ -77,7 +77,7 @@ public class AbsVerticalSeekBar extends VerticalProgressBar{
             // Assuming the thumb drawable is symmetric, set the thumb offset
             // such that the thumb will hang halfway off either edge of the
             // progress bar.
-            mThumbOffset = (int)thumb.getIntrinsicHeight() / 2;
+            mThumbOffset = (int) thumb.getIntrinsicHeight() / 2;
         }
         mThumb = thumb;
         invalidate();
@@ -105,7 +105,7 @@ public class AbsVerticalSeekBar extends VerticalProgressBar{
      * Sets the amount of progress changed via the arrow keys.
      *
      * @param increment The amount to increment or decrement when the user
-     *            presses the arrow keys.
+     *                  presses the arrow keys.
      */
     public void setKeyProgressIncrement(int increment) {
         mKeyProgressIncrement = increment < 0 ? -increment : increment;
@@ -117,7 +117,7 @@ public class AbsVerticalSeekBar extends VerticalProgressBar{
      * By default, this will be a value that is derived from the max progress.
      *
      * @return The amount to increment or decrement when the user presses the
-     *         arrow keys. This will be positive.
+     * arrow keys. This will be positive.
      */
     public int getKeyProgressIncrement() {
         return mKeyProgressIncrement;
@@ -214,10 +214,10 @@ public class AbsVerticalSeekBar extends VerticalProgressBar{
 
         // The extra space for the thumb to move on the track
         available += mThumbOffset * 2;
-        int thumbPos = (int) ((1-scale) * available);
+        int thumbPos = (int) ((1 - scale) * available);
         int leftBound, rightBound;
         if (gap == Integer.MIN_VALUE) {
-        	Rect oldBounds = thumb.getBounds();
+            Rect oldBounds = thumb.getBounds();
             leftBound = oldBounds.left;
             rightBound = oldBounds.right;
         } else {
@@ -301,7 +301,7 @@ public class AbsVerticalSeekBar extends VerticalProgressBar{
     private void trackTouchEvent(MotionEvent event) {
         final int height = getHeight();
         final int available = height - mPaddingTop - mPaddingBottom;
-        int y = height - (int)event.getY();
+        int y = height - (int) event.getY();
         float scale;
         float progress = 0;
         if (y < mPaddingBottom) {
@@ -309,7 +309,7 @@ public class AbsVerticalSeekBar extends VerticalProgressBar{
         } else if (y > height - mPaddingTop) {
             scale = 1.0f;
         } else {
-            scale = (float)(y - mPaddingBottom) / (float)available;
+            scale = (float) (y - mPaddingBottom) / (float) available;
             progress = mTouchProgressOffset;
         }
 

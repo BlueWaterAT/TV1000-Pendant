@@ -35,13 +35,13 @@
     <string name="progDel">Delete Row</string>
     <string name="progCopy">Copy Row</string>
     <string name="progPaste">Paste Row</string>
-    <string name="progParam">Parameters</string>
 
     <!-- Are these even needed? Talk w/ Parsh -->
     <string name="progSaveAs">Save As…</string>
     <string name="progLoad">Load Table</string>
 
     <string name="progSend">Send</string>
+    <string name="progDownload">Download</string>
 
 
     <!-- Column popup stuff -->
@@ -58,4 +58,16 @@
     <string name="paramColComm">Comment</string>
     <string name="paramKeyRows">nrows</string>
     <string name="paramKeyPath">path</string>
+
+    <!--Paged Program Table controls-->
+    <string name="pptJumpPrev">"\u2190"</string>
+    <string name="pptJumpNext">"\u2192"</string>
+    <string name="pptSetPageSize">Set Page Size</string>
+    <string name="pptJumpRow">Jump to Row</string>
+
+
+    <string name="angle_value">Angle: %1$.2f</string>
+    <string name="offset_value">%1$.2f :Speed</string>
+    <string name="angle_value_none">Angle: none</string>
+    <string name="offset_value_none">none :speed</string>
 </resources>

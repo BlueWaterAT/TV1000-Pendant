@@ -13,14 +13,14 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.graphics.drawable.shapes.RoundRectShape;
 import android.graphics.drawable.shapes.Shape;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewDebug;
 import android.view.ViewParent;
 import android.widget.RemoteViews.RemoteView;
-import android.os.Parcel;
-import android.os.Parcelable;
 import com.bwat.pendant.R;
 
 
@@ -47,19 +47,20 @@ public class VerticalProgressBar extends View {
     private boolean mInDrawing;
 
     protected int mScrollX;
-	protected int mScrollY;
-	protected int mPaddingLeft;
-	protected int mPaddingRight;
-	protected int mPaddingTop;
-	protected int mPaddingBottom;
-	protected ViewParent mParent;
+    protected int mScrollY;
+    protected int mPaddingLeft;
+    protected int mPaddingRight;
+    protected int mPaddingTop;
+    protected int mPaddingBottom;
+    protected ViewParent mParent;
 
     /**
      * Create a new progress bar with range 0...100 and initial progress of 0.
+     *
      * @param context the application environment
      */
     public VerticalProgressBar(Context context) {
-    	this(context, null);
+        this(context, null);
     }
 
     public VerticalProgressBar(Context context, AttributeSet attrs) {
@@ -72,7 +73,7 @@ public class VerticalProgressBar extends View {
         initProgressBar();
 
         TypedArray a =
-            context.obtainStyledAttributes(attrs, R.styleable.ProgressBar, defStyle, 0);
+                context.obtainStyledAttributes(attrs, R.styleable.ProgressBar, defStyle, 0);
 
         mNoInvalidate = true;
 
@@ -109,7 +110,7 @@ public class VerticalProgressBar extends View {
     private Drawable tileify(Drawable drawable, boolean clip) {
 
         if (drawable instanceof LayerDrawable) {
-        	LayerDrawable background = (LayerDrawable) drawable;
+            LayerDrawable background = (LayerDrawable) drawable;
             final int N = background.getNumberOfLayers();
             Drawable[] outDrawables = new Drawable[N];
 
@@ -151,7 +152,7 @@ public class VerticalProgressBar extends View {
     }
 
     Shape getDrawableShape() {
-        final float[] roundedCorners = new float[] { 5, 5, 5, 5, 5, 5, 5, 5 };
+        final float[] roundedCorners = new float[]{5, 5, 5, 5, 5, 5, 5, 5};
         return new RoundRectShape(roundedCorners, null, null);
     }
 
@@ -191,7 +192,6 @@ public class VerticalProgressBar extends View {
      * progress mode.</p>
      *
      * @param d the new drawable
-     *
      * @see #getProgressDrawable()
      */
     public void setProgressDrawable(Drawable d) {
@@ -301,7 +301,6 @@ public class VerticalProgressBar extends View {
      * <p>Set the current progress to the specified value.</p>
      *
      * @param progress the new progress, between 0 and {@link #getMax()}
-     *
      * @see #getProgress()
      * @see #incrementProgressBy(int)
      */
@@ -394,7 +393,6 @@ public class VerticalProgressBar extends View {
      * <p>Set the range of the progress bar to 0...<tt>max</tt>.</p>
      *
      * @param max the upper range of this progress bar
-     *
      * @see #getMax()
      * @see #setProgress(int)
      * @see #setSecondaryProgress(int)
@@ -418,7 +416,6 @@ public class VerticalProgressBar extends View {
      * <p>Increase the progress bar's progress by the specified amount.</p>
      *
      * @param diff the amount by which the progress must be increased
-     *
      * @see #setProgress(int)
      */
     public synchronized final void incrementProgressBy(int diff) {
@@ -429,7 +426,6 @@ public class VerticalProgressBar extends View {
      * <p>Increase the progress bar's secondary progress by the specified amount.</p>
      *
      * @param diff the amount by which the secondary progress must be increased
-     *
      * @see #setSecondaryProgress(int)
      */
     public synchronized final void incrementSecondaryProgressBy(int diff) {

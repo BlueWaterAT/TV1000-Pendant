@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,12 +10,12 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dip"
-        android:layout_weight="1"
+        android:layout_weight="0.7"
         android:orientation="vertical">
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
 
@@ -35,30 +36,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/connectButton"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:text="Connect" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/accessButton"
+                android:layout_marginLeft="10dp"
+                android:text="access code" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/disconnectButton"
+                android:layout_marginLeft="10dp"
+                android:text="disconnect" />
         </LinearLayout>
 
-        <!--<LinearLayout-->
-        <!--android:orientation="horizontal"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="center_horizontal">-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
-        <!--android:text="Port: " />-->
-
-        <!--<EditText-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/vPort"-->
-        <!--android:text="1234"-->
-        <!--android:layout_weight="1"-->
-        <!--android:hint="Port" />-->
-        <!--</LinearLayout>-->
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/accesscode"
+                android:hint="type the accesscode "
+                android:textColorHint="#83cfec"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
 
 
         <TextView
@@ -67,15 +74,16 @@
             android:id="@+id/connectStatus"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_gravity="center_horizontal"
-            android:text="@string/status_start" />
+            android:text="@string/status_start"
+            android:visibility="gone" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0dip"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="2"
-        android:weightSum="4">
+        android:weightSum="4"
+        android:layout_weight="2.5">
 
         <LinearLayout
             android:layout_weight="1"
@@ -95,27 +103,31 @@
                 android:layout_height="fill_parent"
                 android:id="@+id/seekSpeed"
                 android:rotation="270"
-                android:layout_gravity="fill_vertical"/>
+                android:layout_gravity="fill_vertical" />
 
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="0dip"
-            android:layout_height="fill_parent"
-            android:layout_weight="2" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
+
+        <!--not visible-->
         <LinearLayout
-            android:layout_width="0dip"
-            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="0"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Update time (ms): " />
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -130,6 +142,7 @@
                     android:text="250"
                     android:minWidth="60dp"
                     android:id="@+id/updateMsText" />
+
 
                 <Button
                     android:layout_width="wrap_content"
@@ -146,20 +159,89 @@
                 android:id="@+id/updateMsDisplay" />
         </LinearLayout>
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.5" />
+        <!-- Control button-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:id="@+id/tv_angle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="angle" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:id="@+id/tv_offset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:layout_alignParentRight="true"
+                    android:text="speed"
+                    android:layout_weight="2.41" />
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="300dip"
+                android:layout_height="300dip">
+
+                <com.bwat.pendant.bugstick.Joystick
+                    android:id="@+id/joystick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/bg_base"
+                    app:start_on_first_touch="true"
+                    app:force_square="true"
+                    app:motion_constraint="None"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true">
+
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/bg_stick" />
+                </com.bwat.pendant.bugstick.Joystick>
+            </RelativeLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="0dip"
+        android:layout_height="50dip"
         android:layout_weight="1"
         android:weightSum="3"
         android:orientation="horizontal">
 
+
         <LinearLayout
-            android:layout_width="0dip"
-            android:layout_height="fill_parent"
+            android:layout_width="274dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_weight="2">
+            android:layout_weight="0.53">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -186,6 +268,11 @@
                 android:layout_gravity="center_horizontal" />
         </LinearLayout>
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
         <LinearLayout
             android:layout_width="0dip"
             android:layout_height="fill_parent"
@@ -202,7 +289,9 @@
             <SeekBar
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/seekHeading"/>
+                android:id="@+id/seekHeading" />
         </LinearLayout>
     </LinearLayout>
+
+
 </LinearLayout>

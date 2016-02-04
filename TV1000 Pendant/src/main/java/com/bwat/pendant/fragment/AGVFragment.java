@@ -8,10 +8,11 @@ import com.bwat.pendant.activity.AGVMainActivity;
  * @author Kareem ElFaramawi
  */
 public abstract class AGVFragment extends Fragment {
-	protected AGVMainActivity getAGVActivity() {
-		return (AGVMainActivity) getActivity();
-	}
+    protected AGVMainActivity getAGVActivity() {
+        return (AGVMainActivity) getActivity();
+    }
 
-	public abstract void updateAGV(AGVConnection con);
-	public abstract void processAGVResponse(String message);
+    public abstract void updateAGV(AGVConnection con);
+
+    public abstract void processAGVResponse(String message);
 }

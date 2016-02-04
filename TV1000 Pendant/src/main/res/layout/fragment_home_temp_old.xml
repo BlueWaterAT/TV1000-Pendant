@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/ipAddress"
             android:layout_weight="1"
-            android:hint="IP Address"/>
+            android:hint="IP Address" />
     </LinearLayout>
 
     <LinearLayout
@@ -42,7 +42,7 @@
             android:id="@+id/vPort"
             android:text="1234"
             android:layout_weight="1"
-            android:hint="Port"/>
+            android:hint="Port" />
     </LinearLayout>
 
     <Button
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/commandText"
             android:layout_weight="1"
-            android:hint="Enter command"/>
+            android:hint="Enter command" />
     </LinearLayout>
 
     <Button
@@ -117,7 +117,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Speed"/>
+        android:text="Speed" />
+
     <SeekBar
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
